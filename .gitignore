@@ -1,0 +1,22 @@
+# Python bytecode and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local virtual environments
+.venv/
+venv/
+
+# Local application data
+data/*.db
+data/epg/
+
+# Temporary feed inspections
+television-*.xml
+television-*.xml.gz
+
+# PyCharm starter file outside the application package
+main.py
+
+# IDE settings
+.idea/

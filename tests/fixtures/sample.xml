@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tv>
+  <programme start="20260916200000 +0200" stop="20260916210000 +0200" channel="DasErste.de">
+    <title>Tagesschau</title>
+    <sub-title>Die wichtigsten Nachrichten</sub-title>
+    <category>Nachrichten</category>
+    <desc>Die Nachrichten des Tages.</desc>
+  </programme>
+  <programme start="20260916210000 +0200" stop="20260916214500 +0200" channel="DasErste.de">
+    <title>Reportage</title>
+  </programme>
+  <programme start="20260916200000 +0200" stop="20260916210000 +0200" channel="Andere.de">
+    <title>Unberücksichtigt</title>
+  </programme>
+</tv>
