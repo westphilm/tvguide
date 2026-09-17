@@ -88,6 +88,10 @@ class ServiceTests(unittest.TestCase):
         self.assertEqual('Favoriten', groups[0][0].name)
         self.assertEqual(['TWO'], [channel.short_name for channel in groups[0][1]])
 
+        group_service.rename(groups[0][0].id, 'Abends')
+
+        self.assertEqual('Abends', group_service.list_groups_with_channels()[0][0].name)
+
 
 if __name__ == '__main__':
     unittest.main()

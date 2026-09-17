@@ -39,3 +39,6 @@ class ChannelGroupService:
 
     def replace_members(self, group_id: int, channel_ids: list[int]) -> None:
         self.repository.replace_members(group_id, channel_ids)
+
+    def rename(self, group_id: int, name: str) -> None:
+        self.repository.rename(group_id, name)

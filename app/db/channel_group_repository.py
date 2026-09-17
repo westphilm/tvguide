@@ -24,6 +24,10 @@ class ChannelGroupRepository:
         with self.database.transaction() as connection:
             self._replace_members(connection, group_id, channel_ids)
 
+    def rename(self, group_id: int, name: str) -> None:
+        with self.database.transaction() as connection:
+            connection.execute('UPDATE channel_groups SET name = ? WHERE id = ?', (name, group_id))
+
     @staticmethod
     def _replace_members(connection, group_id: int | None, channel_ids: list[int]) -> None:
         if group_id is None:

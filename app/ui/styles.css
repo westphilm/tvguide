@@ -7,6 +7,15 @@
     --tv-text: #eef2f8;
 }
 
+:root.tv-light {
+    color-scheme: light;
+    --tv-border: rgba(24, 33, 48, 0.13);
+    --tv-surface: rgba(244, 247, 251, 0.88);
+    --tv-surface-hover: rgba(232, 238, 246, 0.96);
+    --tv-muted: rgba(29, 42, 62, 0.63);
+    --tv-text: #172235;
+}
+
 body {
     margin: 0;
     color: var(--tv-text);
@@ -14,6 +23,13 @@ body {
         radial-gradient(circle at top left, rgba(103, 84, 180, 0.17), transparent 34rem),
         radial-gradient(circle at top right, rgba(52, 123, 168, 0.14), transparent 30rem),
         #10131a;
+}
+
+:root.tv-light body {
+    background:
+        radial-gradient(circle at top left, rgba(123, 102, 214, 0.15), transparent 34rem),
+        radial-gradient(circle at top right, rgba(86, 165, 211, 0.16), transparent 30rem),
+        #e7edf5;
 }
 
 .tv-shell {
@@ -24,7 +40,8 @@ body {
 
 .tv-header { margin-bottom: 22px; }
 .tv-header .tv-subtitle { margin-bottom: 0; }
-.tv-add-group { margin-left: auto; }
+.tv-header-actions { margin-left: auto; gap: 8px; }
+.tv-theme-toggle { color: rgba(238, 242, 248, 0.72); }
 .tv-group { width: 100%; min-width: 100%; max-width: 100%; margin-bottom: 28px; }
 .tv-group-header { margin: 0 4px 9px; }
 .tv-group-title { font-size: 1.03rem; font-weight: 620; }
@@ -83,6 +100,10 @@ body {
     font-size: 0.92rem;
 }
 
+.tv-time { display: flex; white-space: pre; }
+.tv-time-start { font-weight: 680; }
+.tv-time-end { font-weight: 400; }
+
 .tv-program-title {
     font-size: 1rem;
     font-weight: 560;
@@ -116,7 +137,29 @@ body {
     font-size: 0.75rem;
 }
 
-.tv-dialog { min-width: min(520px, calc(100vw - 32px)); }
+.tv-dialog { min-width: min(520px, calc(100vw - 32px)); color: var(--tv-text); background: #1a1f2a; border: 1px solid var(--tv-border); box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42); }
 .tv-dialog-title { font-size: 1.1rem; font-weight: 620; }
 .tv-sort { display: flex; justify-content: flex-end; gap: 2px; align-self: start; }
 .tv-sort .q-btn { min-width: 30px; min-height: 30px; color: rgba(238, 242, 248, 0.58); }
+.tv-media-link { display: flex; color: inherit; text-decoration: none; }
+.tv-media-link .q-btn { color: rgba(238, 242, 248, 0.72); }
+.tv-dialog .q-field__control { background: rgba(255, 255, 255, 0.06); }
+.tv-dialog .q-field__native, .tv-dialog .q-field__input { color: var(--tv-text); }
+.tv-dialog .q-field__label { color: var(--tv-muted); }
+.tv-select-menu { color: var(--tv-text); background: #252c39; border: 1px solid var(--tv-border); }
+.tv-select-menu .q-item { color: var(--tv-text); }
+.tv-select-menu .q-item--active { background: rgba(141, 126, 234, 0.24); }
+.tv-select-menu .q-item--active .q-item__label { color: #ffffff; font-weight: 600; }
+.tv-select-menu .q-checkbox__inner--truthy { color: #9b8cf0; }
+
+:root.tv-light .tv-table { box-shadow: 0 18px 54px rgba(50, 69, 96, 0.12); }
+:root.tv-light .tv-time,
+:root.tv-light .tv-info { color: rgba(23, 34, 53, 0.76); }
+:root.tv-light .tv-theme-toggle,
+:root.tv-light .tv-sort .q-btn { color: rgba(23, 34, 53, 0.62); }
+:root.tv-light .tv-media-link .q-btn { color: rgba(23, 34, 53, 0.78); }
+:root.tv-light .tv-dialog { background: #f1f4f8; box-shadow: 0 24px 70px rgba(50, 69, 96, 0.18); }
+:root.tv-light .tv-dialog .q-field__control { background: rgba(29, 42, 62, 0.08); }
+:root.tv-light .tv-select-menu { color: #172235; background: #f1f4f8; }
+:root.tv-light .tv-select-menu .q-item { color: #172235; }
+:root.tv-light .tv-select-menu .q-item--active { background: rgba(123, 102, 214, 0.16); }
