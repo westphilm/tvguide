@@ -1,11 +1,11 @@
-# Television
+# tvguide
 
 Schlanke lokale NiceGUI-Anwendung für das aktuelle Fernsehprogramm.
 
 ## Setup
 
 ```bash
-cd /opt/PycharmProjects/television
+cd /opt/PycharmProjects/tvguide
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -18,7 +18,7 @@ Standardmäßig lädt die App einen öffentlichen deutschen XMLTV-Feed. Für ein
 anderen XMLTV-Feed kann die App mit einer URL gestartet werden:
 
 ```bash
-TELEVISION_EPG_URL='https://example.invalid/guide.xml.gz' python -m app.main
+TVGUIDE_EPG_URL='https://example.invalid/guide.xml.gz' python -m app.main
 ```
 
 Der `XmltvProgramProvider` unterstützt XMLTV sowie gzip-komprimierte XMLTV-Dateien

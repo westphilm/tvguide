@@ -115,6 +115,6 @@ class XmltvProgramProvider(ProgramProvider):
 
     @staticmethod
     def _download(feed_url: str) -> bytes:
-        request = Request(feed_url, headers={'User-Agent': 'Television/0.1'})
+        request = Request(feed_url, headers={'User-Agent': 'tvguide/0.1'})
         with urlopen(request, timeout=20) as response:
             return response.read()

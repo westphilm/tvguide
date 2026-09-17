@@ -32,7 +32,7 @@ def register_television_page(
         def toggle_theme() -> None:
             ui.run_javascript('''
                 const isLight = document.documentElement.classList.toggle('tv-light');
-                localStorage.setItem('television-theme', isLight ? 'light' : 'dark');
+                localStorage.setItem('tvguide-theme', isLight ? 'light' : 'dark');
             ''')
 
         def channel_options() -> dict[int, str]:
@@ -79,7 +79,7 @@ def register_television_page(
             with container:
                 with ui.row().classes('tv-header items-end no-wrap'):
                     with ui.column().classes('gap-0'):
-                        ui.label('Television').classes('tv-title')
+                        ui.label('tvguide').classes('tv-title')
                         program_date_label = ui.label(format_program_date(now)).classes('tv-subtitle')
                     with ui.row().classes('tv-header-actions items-center no-wrap'):
                         ui.button('+ Tabelle', on_click=open_group_dialog).classes('tv-add-group').props('outline')
@@ -217,7 +217,7 @@ def register_television_page(
 
         render()
         ui.run_javascript('''
-            if (localStorage.getItem('television-theme') === 'light') {
+            if (localStorage.getItem('tvguide-theme') === 'light') {
                 document.documentElement.classList.add('tv-light');
             }
         ''')

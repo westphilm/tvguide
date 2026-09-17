@@ -16,7 +16,7 @@ from app.ui.pages.television import register_television_page
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = BASE_DIR / 'data'
-DB_PATH = DATA_DIR / 'television.db'
+DB_PATH = DATA_DIR / 'tvguide.db'
 EPG_CACHE_PATH = DATA_DIR / 'epg' / 'germany.xml.gz'
 DEFAULT_EPG_URL = 'https://www.open-epg.com/files/germany.xml.gz'
 
@@ -30,7 +30,7 @@ def create_app() -> tuple[ChannelService, ChannelGroupService, ProgramService]:
     channel_group_service = ChannelGroupService(ChannelGroupRepository(database))
     channel_group_service.ensure_defaults(channel_service.list_enabled())
 
-    feed_url = os.environ.get('TELEVISION_EPG_URL', DEFAULT_EPG_URL)
+    feed_url = os.environ.get('TVGUIDE_EPG_URL', DEFAULT_EPG_URL)
     provider = XmltvProgramProvider(feed_url, feed_cache_path=EPG_CACHE_PATH)
 
     program_service = ProgramService(
@@ -49,7 +49,7 @@ if __name__ in {'__main__', '__mp_main__'}:
     ui.run(
         host='127.0.0.1',
         port=9000,
-        title='Television',
+        title='tvguide',
         reload=False,
         show=False,
     )
