@@ -73,7 +73,7 @@ Git versioniert.
 ### Version
 > NiceGUI TV Guide &middot; 23.10.2026  
 > Version: beta-release 0.9.3-beta  
-> [github.com/westphilm/tvguide](github.com/westphilm/tvguide) &middot; Supported by ChatGPT &middot; [MIT License](https://opensource.org/license/mit/)
+> [github.com/westphilm/tvguide](https://github.com/westphilm/tvguide) &middot; Supported by ChatGPT &middot; [MIT License](https://opensource.org/license/mit/)
 
 
 __
