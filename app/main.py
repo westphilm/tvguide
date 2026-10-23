@@ -19,6 +19,8 @@ DATA_DIR = BASE_DIR / 'data'
 DB_PATH = DATA_DIR / 'tvguide.db'
 EPG_CACHE_PATH = DATA_DIR / 'epg' / 'germany.xml.gz'
 DEFAULT_EPG_URL = 'https://www.open-epg.com/files/germany.xml.gz'
+DEFAULT_HOST = '127.0.0.1'
+DEFAULT_PORT = 9000
 
 
 def create_app() -> tuple[ChannelService, ChannelGroupService, ProgramService]:
@@ -47,8 +49,8 @@ register_television_page(channel_service, channel_group_service, program_service
 
 if __name__ in {'__main__', '__mp_main__'}:
     ui.run(
-        host='127.0.0.1',
-        port=9000,
+        host=os.environ.get('TVGUIDE_HOST', DEFAULT_HOST),
+        port=int(os.environ.get('TVGUIDE_PORT', DEFAULT_PORT)),
         title='tvguide',
         reload=False,
         show=False,

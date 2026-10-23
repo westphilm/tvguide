@@ -19,6 +19,20 @@ python -m app.main
 
 Die Anwendung läuft lokal unter `http://127.0.0.1:9000`.
 
+### Zugriff im lokalen Netzwerk
+
+Zum Bereitstellen im lokalen Netzwerk die Anwendung an alle Netzwerkschnittstellen
+binden:
+
+```bash
+TVGUIDE_HOST=0.0.0.0 python -m app.main
+```
+
+Im Browser wird dabei die IP-Adresse des Pi verwendet, zum Beispiel
+`http://192.168.50.1:9000`. `0.0.0.0` ist nur die Bindeadresse und keine Adresse
+für den Browser. Bei einer Firewall muss TCP-Port 9000 im lokalen Netzwerk
+freigegeben sein.
+
 Um das Startpaket später erneut einzuspielen, die Anwendung beenden,
 `data/tvguide.db` löschen und sie wieder starten. Eigene Senderreihenfolgen und
 Tabellen werden dabei zurückgesetzt; die Stream-Links stammen aus
