@@ -56,3 +56,12 @@ werden, bleiben die zuletzt erfolgreich importierten Daten erhalten.
 Die zuletzt erfolgreich geladene XMLTV-Rohdatei bleibt zusätzlich unter
 `data/epg/germany.xml.gz` liegen. Sie dient der lokalen Prüfung und wird nicht in
 Git versioniert.
+
+### Aufruf
+
+```bash
+  nohup "$HOME/bin/tvguide.sh" </dev/null >"$HOME/tvguide.log" 2>&1 &
+  tail -f "$HOME/tvguide.log"
+```
+
+__
