@@ -71,9 +71,9 @@ Git versioniert.
 > &#127760; **http://192.168.1.2:9000/**
 
 ### Version
+> NiceGUI TV Guide &middot; 23.10.2026  
 > Version: beta-release 0.9.3-beta  
-> 23.10.2026 · Local single TV Guide  
-> github.com/westphilm/tvguide &middot; Supported by ChatGPT &middot; License: MIT  
+> [github.com/westphilm/tvguide](github.com/westphilm/tvguide) &middot; Supported by ChatGPT &middot; [MIT License](https://opensource.org/license/mit/)
 
 
 __
