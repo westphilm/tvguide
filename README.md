@@ -4,8 +4,13 @@ Schlanke lokale NiceGUI-Anwendung für das aktuelle Fernsehprogramm.
 
 ## Setup
 
+Das Startpaket enthält den vollständigen Senderkatalog einschließlich der
+hinterlegten Mediathek-Links. Beim ersten Start legt die Anwendung daraus
+automatisch alle Sender und die beiden Standardtabellen an.
+
 ```bash
-cd /opt/PycharmProjects/tvguide
+git clone https://github.com/westphilm/tvguide.git
+cd tvguide
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -13,6 +18,11 @@ python -m app.main
 ```
 
 Die Anwendung läuft lokal unter `http://127.0.0.1:9000`.
+
+Um das Startpaket später erneut einzuspielen, die Anwendung beenden,
+`data/tvguide.db` löschen und sie wieder starten. Eigene Senderreihenfolgen und
+Tabellen werden dabei zurückgesetzt; die Stream-Links stammen aus
+`app/config/channel_catalog.py`.
 
 Standardmäßig lädt die App einen öffentlichen deutschen XMLTV-Feed. Für einen
 anderen XMLTV-Feed kann die App mit einer URL gestartet werden:
