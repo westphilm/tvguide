@@ -1,6 +1,9 @@
 # tvguide
 
-Schlanke lokale NiceGUI-Anwendung für das aktuelle Fernsehprogramm.
+Schlanke lokale NiceGUI-Anwendung für das aktuelle Fernsehprogramm
+
+<img src="doku/img/main-light.jpg" alt="TVGuide hell" width="500">&nbsp;
+<img src="doku/img/main-dark.jpg" alt="TVGuide dunkel" width="500">
 
 ## Setup
 
